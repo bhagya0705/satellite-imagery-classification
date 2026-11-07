@@ -3,4 +3,4 @@ outputs_smoke/
 __pycache__/
 .ipynb_checkpoints/
 *.pt
-venv/
+venv/STUDY_GUIDE.md
