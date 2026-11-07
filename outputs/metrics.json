@@ -1,0 +1,155 @@
+{
+  "test_accuracy": 0.9740740740740741,
+  "test_accuracy_95ci": [
+    0.9693765432098765,
+    0.9790123456790123
+  ],
+  "macro_f1": 0.9731587784681238,
+  "best_val_accuracy": 0.9755555555555555,
+  "per_class": {
+    "AnnualCrop": {
+      "precision": 0.9475982532751092,
+      "recall": 0.9644444444444444,
+      "f1-score": 0.9559471365638766
+    },
+    "Forest": {
+      "precision": 0.9911894273127754,
+      "recall": 1.0,
+      "f1-score": 0.995575221238938
+    },
+    "HerbaceousVegetation": {
+      "precision": 0.9345991561181435,
+      "recall": 0.9844444444444445,
+      "f1-score": 0.9588744588744589
+    },
+    "Highway": {
+      "precision": 0.9813829787234043,
+      "recall": 0.984,
+      "f1-score": 0.9826897470039947
+    },
+    "Industrial": {
+      "precision": 0.9814323607427056,
+      "recall": 0.9866666666666667,
+      "f1-score": 0.9840425531914894
+    },
+    "Pasture": {
+      "precision": 0.9605263157894737,
+      "recall": 0.9733333333333334,
+      "f1-score": 0.9668874172185431
+    },
+    "PermanentCrop": {
+      "precision": 0.9733727810650887,
+      "recall": 0.8773333333333333,
+      "f1-score": 0.9228611500701263
+    },
+    "Residential": {
+      "precision": 0.9889380530973452,
+      "recall": 0.9933333333333333,
+      "f1-score": 0.991130820399113
+    },
+    "River": {
+      "precision": 0.983739837398374,
+      "recall": 0.968,
+      "f1-score": 0.9758064516129032
+    },
+    "SeaLake": {
+      "precision": 1.0,
+      "recall": 0.9955555555555555,
+      "f1-score": 0.9977728285077951
+    }
+  },
+  "top_confusions": [
+    {
+      "true": "PermanentCrop",
+      "predicted": "HerbaceousVegetation",
+      "count": 25
+    },
+    {
+      "true": "PermanentCrop",
+      "predicted": "AnnualCrop",
+      "count": 15
+    },
+    {
+      "true": "AnnualCrop",
+      "predicted": "PermanentCrop",
+      "count": 9
+    },
+    {
+      "true": "AnnualCrop",
+      "predicted": "Pasture",
+      "count": 6
+    },
+    {
+      "true": "River",
+      "predicted": "Highway",
+      "count": 4
+    }
+  ],
+  "splits": {
+    "train": 18900,
+    "val": 4050,
+    "test": 4050
+  },
+  "config": {
+    "img_size": 128,
+    "batch_size": 64,
+    "epochs_head": 3,
+    "epochs_finetune": 4,
+    "lr_head": 0.001,
+    "lr_finetune": 0.0001,
+    "seed": 42,
+    "device": "cuda",
+    "smoke_test": false
+  },
+  "history": [
+    {
+      "stage": "head",
+      "train_loss": 0.7028013525059614,
+      "train_acc": 0.7951322751322751,
+      "val_loss": 0.4107877986225081,
+      "val_acc": 0.8681481481481481
+    },
+    {
+      "stage": "head",
+      "train_loss": 0.3759604943993073,
+      "train_acc": 0.8812698412698413,
+      "val_loss": 0.3429894545637531,
+      "val_acc": 0.885679012345679
+    },
+    {
+      "stage": "head",
+      "train_loss": 0.33061923012531624,
+      "train_acc": 0.8914814814814814,
+      "val_loss": 0.3255058189527488,
+      "val_acc": 0.8911111111111111
+    },
+    {
+      "stage": "finetune",
+      "train_loss": 0.17421316056655198,
+      "train_acc": 0.9444973544973545,
+      "val_loss": 0.10939822734322077,
+      "val_acc": 0.9646913580246913
+    },
+    {
+      "stage": "finetune",
+      "train_loss": 0.10089129333339987,
+      "train_acc": 0.9673544973544973,
+      "val_loss": 0.08347704889321769,
+      "val_acc": 0.9735802469135802
+    },
+    {
+      "stage": "finetune",
+      "train_loss": 0.07638808840875903,
+      "train_acc": 0.9755555555555555,
+      "val_loss": 0.06717172123491764,
+      "val_acc": 0.9755555555555555
+    },
+    {
+      "stage": "finetune",
+      "train_loss": 0.06019950162008326,
+      "train_acc": 0.9786772486772487,
+      "val_loss": 0.09887352513402332,
+      "val_acc": 0.9691358024691358
+    }
+  ]
+}
